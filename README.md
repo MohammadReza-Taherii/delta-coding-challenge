@@ -1,10 +1,10 @@
-# Getting Started with Create React App
+# Coding Challenge - Frontend Developer - DELTA
 
 Coding Challenge - Frontend Developer - DELTA
 
 Create a React app that will Communicate Across Browser Tabs in Realtime.
 
-# Getting Started with Create React App
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
