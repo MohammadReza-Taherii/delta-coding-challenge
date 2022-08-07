@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -11,9 +11,21 @@ const Faq = () => {
   const handleChange = (panel) => {
     if (panel === expanded) {
       setExpanded("");
+      localStorage.setItem("expandedTab", "");
       return;
     }
     setExpanded(panel);
+    localStorage.setItem("expandedTab", panel);
+  };
+
+  useEffect(() => {
+    onChangeStorage();
+  }, []);
+
+  const onChangeStorage = () => {
+    window.addEventListener("storage", () => {
+      setExpanded(localStorage.getItem("expandedTab") || "");
+    });
   };
 
   return (
